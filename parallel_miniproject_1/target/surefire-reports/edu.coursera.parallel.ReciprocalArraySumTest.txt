@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.parallel.ReciprocalArraySumTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.949 sec <<< FAILURE! - in edu.coursera.parallel.ReciprocalArraySumTest
+testParSimpleTwoHundredMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 0.026 sec  <<< ERROR!
+java.lang.OutOfMemoryError: Java heap space
+	at edu.coursera.parallel.ReciprocalArraySumTest.createArray(ReciprocalArraySumTest.java:27)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:68)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParSimpleTwoHundredMillion(ReciprocalArraySumTest.java:127)
+
+testParManyTaskTwoMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 0.384 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: It was expected that the many-task parallel implementation would run at least 2.400000x faster, but it only achieved 1.500000x speedup
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskTwoMillion(ReciprocalArraySumTest.java:143)
+
+testParManyTaskTwoHundredMillion(edu.coursera.parallel.ReciprocalArraySumTest)  Time elapsed: 0.016 sec  <<< ERROR!
+java.lang.OutOfMemoryError: Java heap space
+	at edu.coursera.parallel.ReciprocalArraySumTest.createArray(ReciprocalArraySumTest.java:27)
+	at edu.coursera.parallel.ReciprocalArraySumTest.parTestHelper(ReciprocalArraySumTest.java:68)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskTwoHundredMillion(ReciprocalArraySumTest.java:151)
+
